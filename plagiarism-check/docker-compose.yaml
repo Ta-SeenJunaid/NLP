@@ -1,0 +1,14 @@
+
+version : '3'
+
+services:
+
+  web:
+    build: './web'
+    ports:
+      - "1000:1000"
+    links:
+      - db
+
+  db:
+    build: './db'
